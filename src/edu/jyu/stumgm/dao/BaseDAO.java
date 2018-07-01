@@ -33,7 +33,7 @@ public abstract class BaseDAO<T> {
 
 	@SuppressWarnings("unchecked")
 	public T get(Serializable id) {
-		return (T) template.get(targetClass, id);
+		return  template.get(targetClass, id);
 	}
 
 	public void update(T obj) {
@@ -46,7 +46,7 @@ public abstract class BaseDAO<T> {
 
 	public void delete(Long id) {
 		try {
-			T obj = (T) targetClass.newInstance();
+			T obj = targetClass.newInstance();
 			Method method = targetClass.getDeclaredMethod("setId", Long.class);
 			method.invoke(obj, id);
 			delete(obj);
@@ -61,7 +61,7 @@ public abstract class BaseDAO<T> {
 	public List<T> findAll() {
 		return (List<T>) template.executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws  SQLException {
 				return session.createCriteria(targetClass).list();
 			}
 		});

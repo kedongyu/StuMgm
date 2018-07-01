@@ -10,11 +10,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.transform.ResultTransformer;
+
 import org.springframework.orm.hibernate3.HibernateCallback;
 
 import edu.jyu.stumgm.entity.Grade;
-import edu.jyu.stumgm.entity.Student;
+
 
 public class GradeDAO extends BaseDAO<Grade> implements IGradeDAO{
 	public GradeDAO(){
@@ -41,7 +41,7 @@ public class GradeDAO extends BaseDAO<Grade> implements IGradeDAO{
 	public Grade findByStudentNumber(final String number) {
 		return (Grade)template.execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws  SQLException {
 				  return session.createQuery("from Grade g where g.student.stuNumber = :n")
 				     .setParameter("n", number).setMaxResults(1).uniqueResult();
 			}
@@ -53,7 +53,7 @@ public class GradeDAO extends BaseDAO<Grade> implements IGradeDAO{
 	public List<Grade> findByScoreLessThan(final int score) {
 		return (List<Grade>)template.execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws  SQLException {
 				Criteria cri = session.createCriteria(Grade.class);
 				cri.add(
 						Restrictions.or(Restrictions.lt("numElectron", score),
@@ -74,7 +74,7 @@ public class GradeDAO extends BaseDAO<Grade> implements IGradeDAO{
 	public List<Grade> findOrderBySum(final int number, final boolean isAsc) {
 		return (List<Grade>)template.execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws  SQLException {
 				String order = null;
 				if(! isAsc){
 					order = "desc";
@@ -94,7 +94,7 @@ public class GradeDAO extends BaseDAO<Grade> implements IGradeDAO{
 	public List<Grade> findGradebyStudentNumberOrName(final String key) {
 		return (List<Grade>)template.execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws  SQLException {
 				Criteria cri = session.createCriteria(Grade.class);
 				cri.createCriteria("student")
 				.add(Restrictions.or(Restrictions.like("stuNumber", key,

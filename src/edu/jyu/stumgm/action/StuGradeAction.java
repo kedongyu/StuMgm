@@ -54,7 +54,7 @@ public class StuGradeAction extends ActionSupport {
 
 	public String getCourseList() {
 		List<StuGrade> stuGrades = stuGradeBO.findByCourseId(courseId);
-		List<Student> list = new ArrayList<Student>();
+		List<Student> list = new ArrayList<>();
 		if (stuGrades != null) {
 			for (StuGrade stuGrade : stuGrades) {
 				list.add(studentBO.getStudentByNumber(stuGrade.getStuNum()));

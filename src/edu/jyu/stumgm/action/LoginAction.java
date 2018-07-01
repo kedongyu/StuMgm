@@ -11,7 +11,6 @@ import edu.jyu.stumgm.Common;
 import edu.jyu.stumgm.bo.CourseBO;
 import edu.jyu.stumgm.bo.StuAdminBO;
 import edu.jyu.stumgm.bo.UserBO;
-import edu.jyu.stumgm.entity.Course;
 import edu.jyu.stumgm.entity.StuAdmin;
 import edu.jyu.stumgm.entity.User;
 
@@ -70,7 +69,7 @@ public class LoginAction extends ActionSupport {
 	public boolean isLoginError(){
 		return loginError;
 	}
-
+	@Override
 	public String execute(){
 		logger.info("login");
 		if(ActionContext.getContext().getSession().get("user") != null){

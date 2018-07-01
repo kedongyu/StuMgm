@@ -4,10 +4,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.log4j.Logger;
+
 import org.apache.struts2.ServletActionContext;
 
-import com.opensymphony.xwork2.ActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import edu.jyu.stumgm.bo.GradeBO;
@@ -41,7 +41,7 @@ public class AddGradeAction extends ActionSupport {
 	{
 		if("".equals(flag)||"list".equals(flag))
 		{
-			List<Grade> gradelist = gradeBO.getAllGrade();
+			gradelist = gradeBO.getAllGrade();
 			return "list";
 		}
 		if("update".equals(flag))

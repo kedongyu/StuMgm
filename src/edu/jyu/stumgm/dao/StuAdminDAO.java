@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 
-import edu.jyu.stumgm.entity.Course;
+
 import edu.jyu.stumgm.entity.StuAdmin;
 
 public class StuAdminDAO extends BaseDAO implements IStuAdmin {

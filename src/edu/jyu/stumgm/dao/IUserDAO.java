@@ -1,7 +1,5 @@
 package edu.jyu.stumgm.dao;
 
-import java.io.Serializable;
-import java.util.List;
 
 import edu.jyu.stumgm.entity.User;
 

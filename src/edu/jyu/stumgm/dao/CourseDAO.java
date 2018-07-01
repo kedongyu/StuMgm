@@ -1,6 +1,6 @@
 package edu.jyu.stumgm.dao;
 
-import java.io.Serializable;
+
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -9,8 +9,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import edu.jyu.stumgm.entity.Course;
-import edu.jyu.stumgm.entity.Grade;
-import edu.jyu.stumgm.entity.Student;
+
+
 
 public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	public CourseDAO() {
@@ -53,8 +53,7 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	}
 	@Override
 	public void deleteByCourseId(List<Integer> numbers) {
-		// TODO Auto-generated method stub
-		
+	
 	}
 	@Override
 	public Course findByCourseId(int courseId) {

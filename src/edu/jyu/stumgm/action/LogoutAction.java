@@ -7,9 +7,9 @@ import org.apache.log4j.Logger;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-import edu.jyu.stumgm.Common;
-import edu.jyu.stumgm.bo.UserBO;
-import edu.jyu.stumgm.entity.User;
+
+
+
 
 public class LogoutAction extends ActionSupport {
 	
@@ -26,7 +26,7 @@ public class LogoutAction extends ActionSupport {
 	public String execute(){
 	
 		logger.info("logout");
-		Map sessionMap=(Map)ActionContext.getContext().getSession();
+		Map sessionMap=ActionContext.getContext().getSession();
 		if(!sessionMap.isEmpty()){
 			sessionMap.clear();
 		}

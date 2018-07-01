@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import edu.jyu.stumgm.entity.Course;
-import edu.jyu.stumgm.entity.Grade;
 
 public interface ICourseDAO {
 	

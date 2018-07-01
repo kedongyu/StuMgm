@@ -12,7 +12,7 @@ public class AddCourseAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private CourseBO courseBO;
 	public AddCourseAction() {
-		
+		super();
 	}
 	public CourseBO getCourseBO() {
 		return courseBO;
