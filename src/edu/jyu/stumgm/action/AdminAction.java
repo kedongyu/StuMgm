@@ -96,7 +96,6 @@ public class AdminAction extends ActionSupport {
 			String realPath = ServletActionContext.getServletContext().getRealPath("/upload");
 			File file = new File(realPath + "\\" + new Date().getTime());
 			System.out.println(realPath + "\\" + new Date().getTime());
-			// 测试此抽象路径名表示的文件或目录是否存在。若不存在，创建此抽象路径名指定的目录，包括所有必需但不存在的父目录。
 			
 
 		if (stufile != null) {
