@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="edu.jyu.stumgm.entity.Course" table="course">
+      <meta attribute="class-description">
+         This class contains the goods detail. 
+      </meta>
+      <id name="id" type="int" column="cs_id">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="cs_name" type="string"/>
+      <property name="credit" column="cs_credit" type="short"/>
+   </class>
+</hibernate-mapping>
