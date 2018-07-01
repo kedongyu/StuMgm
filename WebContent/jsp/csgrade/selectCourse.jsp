@@ -139,7 +139,7 @@
 										onclick="checkall(courseForm);" /> <input type=button
 										name="allnotcheck" value="全不选"
 										onclick="uncheckall(courseForm);" />
-									<input type="button" value="選秀該课程" onclick="studyCourse(courseForm)"/>
+									<input type="button" value="选修該课程" onclick="studyCourse(courseForm)"/>
 									
 								</center>
 							</td>

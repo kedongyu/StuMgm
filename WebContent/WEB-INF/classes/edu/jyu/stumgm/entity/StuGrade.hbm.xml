@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.jyu.stumgm.entity.StuGrade"
+		table="stu_elective_grade">
+		<composite-id>
+			<key-property name="stuNum" column="stu_num"
+				type="string"></key-property>
+			<key-property name="csId" column="cs_id" type="int"></key-property>
+		</composite-id>
+		<property name="grade" column="grade" type="short" />
+	</class>
+</hibernate-mapping>
