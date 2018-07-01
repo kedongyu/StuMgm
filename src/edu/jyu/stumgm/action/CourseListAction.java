@@ -32,7 +32,7 @@ public class CourseListAction extends ActionSupport {
 		this.courseBO = courseBO;
 	}
 	public CourseListAction() {
-		
+		super();
 	}
 	@SuppressWarnings("unchecked")
 	public String getList() {

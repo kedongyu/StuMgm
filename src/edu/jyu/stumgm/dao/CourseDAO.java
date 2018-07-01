@@ -26,6 +26,7 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
+	@Override
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
