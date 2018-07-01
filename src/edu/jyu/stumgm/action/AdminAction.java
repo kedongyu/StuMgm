@@ -87,7 +87,7 @@ public class AdminAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public File stufile;
+	public File stufile; 
 	private String stufileFileName;// 上传的文件名。上传字段名称+FileName 注意大小写
 	private String stufileContentType;// 上传文件的MIME类型。上传字段名称+ContentType 注意大小写
 
