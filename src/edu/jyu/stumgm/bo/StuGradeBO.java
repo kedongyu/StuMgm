@@ -8,7 +8,7 @@ import edu.jyu.stumgm.entity.StuGrade;
 public class StuGradeBO {
 	private IStuGradeDAO iStuGradeDAO;
 	public StuGradeBO() {
-		
+		super();
 	}
 	
 	public IStuGradeDAO getiStuGradeDAO() {

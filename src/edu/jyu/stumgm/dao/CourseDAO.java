@@ -18,7 +18,7 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	}
 	protected CourseDAO(Class<Course> c) {
 		super(c);
-		// TODO Auto-generated constructor stub
+
 	}
 	private SessionFactory sessionFactory;
 	private List<Course> courselist;
@@ -32,7 +32,7 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	}
 	@Override
 	public void saveOrUpdate(Course obj) {
-		// TODO Auto-generated method stub
+
 		
 	}
 	public void save(Course course) {
@@ -45,7 +45,7 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	}
 	@Override
 	public void deleteByCourseId(int courseId) {
-		// TODO Auto-generated method stub
+
 		String hql="delete From Course C Where C.id = "+ courseId;
 		System.out.println(hql);
 		Session session = sessionFactory.openSession();
@@ -58,7 +58,7 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	}
 	@Override
 	public Course findByCourseId(int courseId) {
-		// TODO Auto-generated method stub
+
 		Session session = sessionFactory.openSession();
 		Transaction tx=session.beginTransaction();
 		Course course=(Course)session.get(Course.class,courseId);
@@ -69,7 +69,6 @@ public class CourseDAO extends BaseDAO<Course> implements ICourseDAO {
 	}
 	@Override
 	public void deleteAll() {
-		// TODO Auto-generated method stub
 		template.bulkUpdate("delete from edu.jyu.stumgm.entity.Course");
 	}
 	@SuppressWarnings("unchecked")

@@ -9,9 +9,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
-import edu.jyu.stumgm.entity.Grade;
+
 import edu.jyu.stumgm.entity.StuGrade;
-import edu.jyu.stumgm.entity.Student;
+
 
 public class StuGradeDAO extends BaseDAO<StuGrade> implements IStuGradeDAO{
 
@@ -21,6 +21,7 @@ public class StuGradeDAO extends BaseDAO<StuGrade> implements IStuGradeDAO{
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
+	@Override
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
